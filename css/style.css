@@ -1,0 +1,197 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+.header__user-photo__img {
+  border-radius: 50%;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 16px;
+}
+.header__btn {
+  padding: 11px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.main {
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.08);
+  padding-top: 8px;
+  background: #fcfcfc;
+}
+
+.form {
+  padding-bottom: 8px;
+}
+.form__input {
+  background-image: url(../images/loop-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 5%;
+  width: 344px;
+  height: 36px;
+  border: 1px solid #ecebeb;
+  border-radius: 18px;
+  padding: 10px 35px 9px 49px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.form__input::-moz-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
+.form__input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.messages__inner {
+  height: 405px;
+  overflow: scroll; /* Добавляем полосы прокрутки */
+}
+
+.messages {
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.message__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.user__box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 8px;
+}
+.user__photo-img {
+  border-radius: 50%;
+}
+.user__name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+}
+.user__text {
+  font-weight: 400;
+  font-size: 12px;
+  color: #7a7a7a;
+  width: 209px;
+  height: 14px;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+.user__text span {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+}
+.user__status {
+  display: flex;
+  align-items: center;
+  gap: 1.2px;
+  padding-top: 15px;
+  position: relative;
+}
+.user__counter {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  top: -3px;
+  color: #ffffff;
+  background: #ff3742;
+  border-radius: 8px;
+  min-width: 16px;
+  height: 16px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  padding: 2px 5px;
+}
+.user__time {
+  font-weight: 400;
+  font-size: 12px;
+  color: #7a7a7a;
+}
+
+.footer {
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.bar__chat {
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7a7a7a;
+  text-align: center;
+  width: 172px;
+  margin: 8px;
+  padding-top: 6px;
+}
+.bar__counter {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  left: 90px;
+  top: 0;
+  color: #ffffff;
+  background: #ff3742;
+  border-radius: 8px;
+  min-width: 16px;
+  height: 16px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  padding: 2px 5px;
+}
+.bar__title--active {
+  color: #000000;
+}/*# sourceMappingURL=style.css.map */

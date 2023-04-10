@@ -1,0 +1,203 @@
+@import "vars.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.container {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  &__user-photo {
+    &__img {
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__btn {
+    padding: 11px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.main {
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.08);
+  padding-top: 8px;
+  background: $background;
+}
+
+.form {
+  padding-bottom: 8px;
+  &__input {
+    background-image: url(../images/loop-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+
+    width: 344px;
+    height: 36px;
+    border: 1px solid $grey-whisper;
+    border-radius: 18px;
+    padding: 10px 35px 9px 49px;
+    @include input;
+
+    &::placeholder {
+      @include input;
+    }
+  }
+}
+.messages__inner {
+  height: 405px;
+  overflow: scroll; /* Добавляем полосы прокрутки */
+}
+.messages {
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);
+}
+.message {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.user {
+  &__box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    padding: 12px 8px;
+  }
+  &__photo-img {
+    border-radius: 50%;
+  }
+
+  &__name {
+    @include user__name;
+  }
+
+  &__text {
+    @include user__info;
+    width: 209px;
+    height: 14px;
+
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+
+    & span {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: 1.2px;
+    padding-top: 15px;
+    position: relative;
+  }
+  &__counter {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 0;
+    top: -3px;
+
+    color: $white;
+    background: $accent-red;
+    border-radius: 8px;
+    min-width: 16px;
+    height: 16px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 2px 5px;
+  }
+
+  &__time {
+    @include user__info;
+  }
+}
+
+.footer {
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.08);
+}
+.bar {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__chat {
+    position: relative;
+    @include user__info;
+    text-align: center;
+    width: 172px;
+    margin: 8px;
+    padding-top: 6px;
+  }
+  &__counter {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 90px;
+    top: 0;
+
+    color: $white;
+    background: $accent-red;
+    border-radius: 8px;
+    min-width: 16px;
+    height: 16px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 2px 5px;
+  }
+
+  &__title {
+    &--active {
+      color: $black;
+    }
+  }
+}

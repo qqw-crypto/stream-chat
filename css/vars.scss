@@ -1,0 +1,21 @@
+$accent-red: #ff3742;
+$background: #fcfcfc;
+$grey-whisper: #ecebeb;
+$grey: #7a7a7a;
+$black: #000000;
+$white: #ffffff;
+
+@mixin input {
+  font-weight: 500;
+  font-size: 14px;
+}
+@mixin user__name {
+  font-weight: 700;
+  font-size: 14px;
+  color: $black;
+}
+@mixin user__info {
+  font-weight: 400;
+  font-size: 12px;
+  color: $grey;
+}
